@@ -1,4 +1,12 @@
-from math import sqrt
+from math import sqrt, log
+
+
+"""
+Solution to the project euler problem 5 of hackerrank:
+https://www.hackerrank.com/contests/projecteuler/challenges/euler005/problem
+"""
+
+
 def isPrime(num):
     if num < 2:
         return False
@@ -17,17 +25,19 @@ def primeFactors(n):
             factors.append(i)
     return factors
 
+def lcm(n):
+    l = []
+    primes = primeFactors(n)
+    for i in primes:
+        p = int(log(n) / log(i))
+        l.append(i ** p)
 
-l = []
-factors = primeFactors(20)
-for i in factors:
-    res = 1
-    while res < 20:
-        res = res * i
-    res = res // i
-    l.append(res)
+    num = 1
+    for x in l:
+        num = num * x
+    return num
 
-num = 1
-for x in l:
-    num = num * x
-print(num)
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    print(lcm(n))
