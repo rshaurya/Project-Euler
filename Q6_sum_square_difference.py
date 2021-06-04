@@ -1,14 +1,12 @@
-def square_sum(num):
-    sum_of_squares = 0
-    square_of_sum = 0
-    sum = 0
-    difference = 0
-    for i in range(1, num + 1):
-        sum_of_squares += i ** 2
-    for k in range(1, num + 1):
-        sum += k
-    square_of_sum = sum ** 2
+def square_sum_difference(limit):
+    sum_num = limit * (limit + 1) // 2
+    sum_squares = ((2*limit + 1) * (limit + 1) * limit) // 6
 
-    return square_of_sum - sum_of_squares
+    return (sum_num ** 2) - sum_squares
 
-print((square_sum(100)))
+#print((square_sum(100)))
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    print(square_sum_difference(n))
