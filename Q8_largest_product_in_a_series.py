@@ -1,6 +1,5 @@
 
 def largest_prod_in_a_series(l, k): # n is a string
-    #num = num.replace("\n", "")
     res = 0
     starting_slice = 0
     end_slice = k
