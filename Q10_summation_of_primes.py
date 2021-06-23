@@ -26,7 +26,7 @@ print(res)'''
 # 2nd method (hackerrank solution)
 # This method below is effective in cracking hackerrank test cases.
 
-# This function prepares a sieve(list) till the given testcases i.e. 10000 in hackerrank.
+# This function prepares a sieve(list) only once till the given testcases i.e. 10000 in hackerrank.
 
 def sieve_of_primes(n):
     last_index = (n - 1) // 2 + 1  
