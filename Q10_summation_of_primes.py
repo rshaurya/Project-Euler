@@ -40,7 +40,8 @@ def sieve_of_primes(n):
 
     return sieve  
 
-''' this function can be used but it needs to be called everytime. 
+'''
+This function can be used but it needs to be called everytime. 
 if we already created a sieve till 10 we can use that sieve and add on further
 which will increase the performance.
 def sum_of_primes(n, sieve):
